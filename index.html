@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trường THPT Đặng Văn Hiếu</title>
+<style>
+:root{--bg:#f2f5fa;--card:#fff;--tx:#1d2433;--mu:#5d6779;--pr:#143d7a;--ac:#c8102e;--ln:#dde3ee;--hv:#e8eef8;--fs:16px}
+body.dark{--bg:#10151f;--card:#1a2130;--tx:#e6eaf2;--mu:#9aa5b8;--pr:#7fb0ff;--ac:#ff6b81;--ln:#2b3446;--hv:#232c3f}
+*{box-sizing:border-box}body{margin:0;font:var(--fs)/1.6 system-ui,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx)}
+a{color:var(--pr);text-decoration:none}a:hover{text-decoration:underline}button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 12px}
+#tb{background:var(--pr);color:#fff;font-size:14px}#tb .wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:6px 12px}#tb a{color:#fff}
+#tb input{padding:3px 10px;border-radius:14px;border:0;background:#fff;color:#222}#tb button{background:#ffffff26;color:#fff;border:0;border-radius:6px;padding:2px 9px}
+#bn{background:linear-gradient(120deg,#0f2f61,#1e5bb8);color:#fff}#bn .wrap{display:flex;align-items:center;gap:16px;padding:16px 12px}
+#bn h1{margin:0;font-size:clamp(20px,3.6vw,34px);letter-spacing:.3px}#bn p{margin:2px 0 0;opacity:.85}
+nav#mn{background:var(--card);box-shadow:0 2px 6px #0002;position:sticky;top:0;z-index:30}
+#hm{display:none;margin:6px;padding:6px 12px;background:var(--pr);color:#fff;border:0;border-radius:6px}
+nav ul{list-style:none;margin:0;padding:0}#mn>.wrap>ul{display:flex;flex-wrap:wrap}
+nav li{position:relative}nav li>a,nav li>button{display:block;padding:11px 13px;font-weight:600;color:var(--tx);background:none;border:0;white-space:nowrap}
+nav li:hover>a,nav li:focus-within>a{background:var(--hv);text-decoration:none}
+nav li>ul{display:none;position:absolute;left:0;top:100%;min-width:230px;background:var(--card);box-shadow:0 6px 18px #0004;border-top:3px solid var(--ac)}
+nav li>ul ul{left:100%;top:0}nav li:hover>ul,nav li:focus-within>ul,nav li.op>ul{display:block}nav li li>a{font-weight:400;white-space:normal}
+#mq{background:var(--card);border-bottom:1px solid var(--ln);overflow:hidden;white-space:nowrap}#mq span{display:inline-block;padding:6px 0 6px 100%;animation:mq 40s linear infinite;color:var(--ac);font-weight:600}
+@keyframes mq{to{transform:translateX(-100%)}}
+.sl{position:relative;height:280px;border-radius:10px;overflow:hidden;margin:14px 0}.sl .s{position:absolute;inset:0;display:none;align-items:flex-end;color:#fff;padding:20px;font-size:22px;font-weight:700}.sl .s.on{display:flex}
+.sl button{position:absolute;top:50%;background:#0006;color:#fff;border:0;font-size:22px;padding:6px 12px}.sl .pv{left:0}.sl .nx{right:0}
+.dots{position:absolute;bottom:8px;right:12px;display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:#fff6}.dots i.on{background:#fff}
+.qk{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}.qk a{background:var(--card);border-radius:10px;padding:12px 6px;text-align:center;font-weight:600;color:var(--tx);box-shadow:0 1px 3px #0002}.qk a:hover{background:var(--hv);text-decoration:none}.qk span{display:block;font-size:26px}
+#g{display:grid;grid-template-columns:260px minmax(0,1fr) 290px;gap:16px;align-items:start}
+.bx{background:var(--card);border-radius:10px;box-shadow:0 1px 3px #0002;margin-bottom:16px;overflow:hidden}.bx h2,.bx h3{margin:0;padding:9px 14px;font-size:1.02em;color:var(--pr);border-left:5px solid var(--ac);background:var(--hv);text-transform:uppercase}.bx .in{padding:10px 14px}
+.bx ul{margin:0;padding-left:18px}.bx li{margin:5px 0}.dt{color:var(--mu);font-size:.85em}
+.th{height:130px;border-radius:8px;margin-bottom:6px}.nw{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+table{border-collapse:collapse;width:100%;font-size:.92em}th,td{border:1px solid var(--ln);padding:5px 8px;text-align:left}th{background:var(--hv)}.tw{overflow-x:auto}
+details{border-bottom:1px solid var(--ln)}summary{padding:8px 4px;cursor:pointer;font-weight:600}
+.pg button,.btn{padding:4px 11px;margin:2px;border:1px solid var(--ln);background:var(--card);border-radius:6px}.pg .on,.btn.p{background:var(--pr);color:var(--card);border-color:var(--pr)}
+input,select,textarea{padding:7px 10px;border:1px solid var(--ln);border-radius:6px;background:var(--card);max-width:100%}textarea{width:100%}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.gal button{height:100px;border:0;border-radius:8px}
+#lb{position:fixed;inset:0;background:#000d;display:none;align-items:center;justify-content:center;z-index:60;color:#fff;font-size:24px}#lb div{width:min(80vw,700px);height:60vh;border-radius:10px;display:flex;align-items:flex-end;padding:16px}
+footer{background:var(--pr);color:#fff;margin-top:20px;padding:18px 0}footer a{color:#fff}
+#up{position:fixed;right:16px;bottom:16px;background:var(--ac);color:#fff;border:0;border-radius:50%;width:42px;height:42px}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#222;color:#fff;padding:9px 16px;border-radius:8px;display:none;z-index:70}
+@media(max-width:1000px){#g{grid-template-columns:240px 1fr}#g aside.r{grid-column:1/-1}}
+@media(max-width:760px){#g{grid-template-columns:1fr}#hm{display:block}#mn>.wrap>ul{display:none;flex-direction:column}#mn.open>.wrap>ul{display:flex}nav li>ul{position:static;box-shadow:none;display:none}nav li>ul ul{padding-left:12px}.nw{grid-template-columns:1fr}.sl{height:180px}}
+@media(prefers-reduced-motion:reduce){#mq span{animation:none;padding-left:0}}
+@media print{#tb,nav,#mq,footer,#up{display:none}}
+</style></head><body>
+<div id="tb"><div class="wrap"><span id="tph"></span><span id="tem"></span><span class="sp" style="flex:1"></span><input id="sq" type="search" placeholder="Tìm kiếm tin tức" aria-label="Tìm kiếm tin tức"><span><button onclick="fs(-1)" aria-label="Giảm cỡ chữ">A-</button> <button onclick="fs(1)" aria-label="Tăng cỡ chữ">A+</button> <button onclick="dk()" aria-label="Chế độ tối">🌙</button></span></div></div>
+<header id="bn"><div class="wrap"><svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#fff"/><path d="M32 12l20 9-20 9-20-9z" fill="#143d7a"/><path d="M18 30v12c0 5 28 5 28 0V30l-14 6z" fill="#c8102e"/></svg><div><h1 id="sn"></h1><p>Dạy tốt · Học tốt · Rèn luyện tốt</p><p id="dt"></p></div></div></header>
+<nav id="mn" aria-label="Menu chính"><button id="hm" onclick="this.parentNode.classList.toggle('open')" aria-label="Mở menu">☰ Menu</button><div class="wrap"><ul id="ml"></ul></div></nav>
+<div id="mq" aria-label="Thông báo mới"><span id="mqt"></span></div>
+<main class="wrap" id="main" tabindex="-1"></main>
+<footer><div class="wrap"><b id="fn"></b><br>Địa chỉ: <span id="fa"></span><br>Điện thoại: <span id="fp"></span> · Email: <a id="fe"></a><br><a href="#/lien-he">Liên hệ</a> · <a href="#/danh-ba">Danh bạ</a> · Facebook · YouTube · Zalo</div></footer>
+<button id="up" onclick="scrollTo({top:0})" aria-label="Lên đầu trang">↑</button><div id="lb" onclick="this.style.display='none'" role="dialog"><div id="lbi"></div></div><div id="toast"></div>
+<script>
+/* ===== DỮ LIỆU: đổi tại đây (tên trường, liên hệ, địa chỉ) ===== */
+const SCHOOL={name:'Trường THPT Đặng Văn Hiếu',short:'THPT Đặng Văn Hiếu',email:'hieudv910@gmail.com',phone:'0392 910 282',person:'Đặng Văn Hiếu',addr:'Số 1, đường Mẫu, phường Mẫu, thành phố Mẫu (địa chỉ mẫu, hãy thay bằng địa chỉ thật)'};
+const E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),$=s=>document.querySelector(s);
+const TO=['Ngữ văn','Toán','Vật lí','Hóa - Tin','Ngoại ngữ','Sinh học','Sử - Địa - Công dân','Thể dục - GDQP&AN','Văn phòng'];
+const MENU=[['Trang chủ',[['Giới thiệu về trường','#/gioi-thieu'],['Về địa phương'],['Liên hệ','#/lien-he']]],
+['Cơ cấu tổ chức',[['Chi bộ Đảng'],['Ban giám hiệu','#/danh-ba'],['Đoàn Thanh niên',[['Giới thiệu'],['Kế hoạch hoạt động'],['Kế hoạch tháng'],['Kết quả thi đua'],['Các mẫu văn bản']]],['Các tổ chuyên môn',TO.map(t=>[t,[['Giới thiệu về tổ'],['Kế hoạch hoạt động của tổ']]])],['Các tổ chức đoàn thể',['Ban đại diện cha mẹ học sinh','Hội khuyến học','Hội chữ thập đỏ','Chi đoàn giáo viên','Diễn đàn cựu học sinh'].map(x=>[x])]]],
+['Tin tức',[['Bản tin trường','#/tin-tuc/Bản tin trường'],['Bài viết','#/tin-tuc/Bài viết'],['Tuyển sinh - Tốt nghiệp THPT','#/tin-tuc/Tuyển sinh']]],
+['Điều hành',[['Thông tin, thông báo'],['Lịch công tác tuần'],['Lịch công tác tháng'],['Thời khoá biểu','#/tkb'],['Văn phòng trực tuyến'],['Chính quyền điện tử']]],
+['Thư viện',[['Thư viện ảnh','#/anh'],['Giới thiệu sách'],['Tra cứu sách'],['Văn bản nhà trường'],['Văn bản Sở GD&ĐT'],['Văn bản Bộ GD&ĐT'],['Văn bản luật']]],
+['Tài nguyên'],['Hồ sơ công khai',[['Kế hoạch giáo dục nhà trường'],['Hồ sơ tổ chuyên môn']]],['Hoạt động ngoài giờ',[['Hoạt động ngoài giờ lên lớp'],['Hướng nghiệp']]]];
+const CATS=['Bản tin trường','Bài viết','Tuyển sinh'];
+const TT=['Lễ khai giảng năm học mới','Học sinh đạt giải cao kỳ thi học sinh giỏi','Ra mắt Câu lạc bộ Âm nhạc','Hưởng ứng Ngày sách và Văn hóa đọc','Kế hoạch kiểm tra cuối học kỳ 1','Tuyên truyền an toàn giao thông','Hội thao truyền thống chào mừng 20/11','Tư vấn hướng nghiệp cho học sinh lớp 12','Thông báo tuyển sinh lớp 10','Hướng dẫn đăng ký dự thi tốt nghiệp THPT','Hoạt động Đoàn Thanh niên tháng 10','Phòng chống ma túy học đường','Giao lưu cựu học sinh','Ngày hội STEM của trường','Tập huấn kỹ năng sống cho học sinh','Vinh danh giáo viên dạy giỏi','Hội nghị cha mẹ học sinh đầu năm','Cuộc thi văn nghệ chào mừng 20/10','Tuyên truyền bảo vệ môi trường','Tổng kết hoạt động ngoài giờ lên lớp'];
+const NEWS=TT.map((t,i)=>({id:i,t,c:CATS[i%3],d:new Date(2026,8,30-i*2),by:SCHOOL.person,h:i*47%360}));
+const fd=d=>d.toLocaleDateString('vi-VN'),gr=h=>`background:linear-gradient(135deg,hsl(${h},60%,35%),hsl(${(h+50)%360},65%,55%))`;
+const POS=['Hiệu trưởng','Phó hiệu trưởng','Tổ trưởng','Tổ phó','Giáo viên','Giáo viên','Kế toán','Văn thư','Bảo vệ'];
+const DB=Array.from({length:40},(_,i)=>({to:TO[i%9],pos:i<1?'Hiệu trưởng':i<3?'Phó hiệu trưởng':POS[2+i%7]}));
+const SUBJ=['Toán','Ngữ văn','Tiếng Anh','Vật lí','Hóa học','Sinh học','Lịch sử','Địa lí','Tin học','GDCD'],DAYS=['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6'],CL=['10A1','10A2','11A1','11A2','12A1','12A2'];
+const LI=(a)=>a.map(n=>`<li><a href="#/bai/${n.id}">${E(n.t)}</a> <span class="dt">(${fd(n.d)})</span></li>`).join('');
+/* ===== MENU ===== */
+function mk(a){return '<ul>'+a.map(x=>{const k=Array.isArray(x[1]);return `<li><a href="${!k&&x[1]?x[1]:'#/cap-nhat'}" ${k?'aria-haspopup="true"':''}>${E(x[0])}${k?' ▾':''}</a>${k?mk(x[1]):''}</li>`}).join('')+'</ul>'}
+$('#ml').outerHTML=mk(MENU).replace('<ul>','<ul id="ml">');
+document.querySelectorAll('#mn li').forEach(li=>{const a=li.firstElementChild;if(li.querySelector(':scope>ul'))a.addEventListener('click',e=>{if(innerWidth<=760){e.preventDefault();li.classList.toggle('op')}})});
+/* ===== ĐẦU/CHÂN TRANG ===== */
+$('#sn').textContent=SCHOOL.name;$('#fn').textContent='© '+new Date().getFullYear()+' '+SCHOOL.name;$('#fa').textContent=SCHOOL.addr;$('#fp').textContent=SCHOOL.phone;
+$('#tph').textContent='☎ '+SCHOOL.phone;$('#tem').innerHTML='✉ <a href="mailto:'+SCHOOL.email+'">'+SCHOOL.email+'</a>';const fe=$('#fe');fe.textContent=SCHOOL.email;fe.href='mailto:'+SCHOOL.email;
+$('#dt').textContent=new Date().toLocaleDateString('vi-VN',{weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'});
+$('#mqt').textContent=NEWS.slice(0,4).map(n=>n.t).join('   ●   ');
+$('#sq').addEventListener('keydown',e=>{if(e.key=='Enter')location.hash='#/tin-tuc/*?q='+encodeURIComponent(e.target.value)});
+let sz=+localStorage.sz||16;function fs(d){sz=Math.min(22,Math.max(13,sz+d));localStorage.sz=sz;document.documentElement.style.setProperty('--fs',sz+'px')}fs(0);
+function dk(){document.body.classList.toggle('dark');localStorage.dk=document.body.classList.contains('dark')?1:''}if(localStorage.dk)document.body.classList.add('dark');
+function toast(m){const t=$('#toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2500)}
+/* ===== TRANG CHỦ ===== */
+let si=0,st,paused=false;
+function home(){const v=(+localStorage.vw||1305808)+Math.floor(Math.random()*3+1);localStorage.vw=v;
+ const sl=Array.from({length:5},(_,i)=>`<div class="s ${i?'':'on'}" style="${gr(i*70)}">${['Chào mừng năm học mới','Học sinh giỏi tỏa sáng','Hoạt động ngoài giờ sôi nổi','Câu lạc bộ đa dạng','Thư viện thân thiện'][i]}</div>`).join('');
+ const qk=[['💻','Văn phòng trực tuyến'],['📅','Lịch công tác tuần'],['🗓️','Lịch công tác tháng'],['📚','Tra cứu sách thư viện'],['🕒','Thời khóa biểu','#/tkb'],['🗂️','Tài nguyên điện tử'],['📄','Văn bản'],['🖼️','Thư viện ảnh','#/anh'],['🎓','Cựu giáo viên'],['🧑‍🎓','Cựu học sinh']].map(q=>`<a href="${q[2]||'#/cap-nhat'}"><span>${q[0]}</span>${q[1]}</a>`).join('');
+ const blk=(c,n)=>`<section class="bx"><h2>${c}</h2><div class="in"><div class="nw">${NEWS.filter(x=>x.c==CATS[n]).slice(0,2).map(x=>`<div><div class="th" style="${gr(x.h)}"></div><b><a href="#/bai/${x.id}">${E(x.t)}</a></b><br><span class="dt">${fd(x.d)}</span><p>Thông tin chi tiết về hoạt động của ${E(SCHOOL.short)}...</p></div>`).join('')}</div><b>Đọc thêm:</b><ul>${LI(NEWS.filter(x=>x.c==CATS[n]).slice(2,6))}</ul><a href="#/tin-tuc/${CATS[n]}">Xem tất cả »</a></div></section>`;
+ $('#main').innerHTML=`<div class="sl" id="sl" onmouseenter="paused=1" onmouseleave="paused=0" role="region" aria-label="Ảnh nổi bật">${sl}<button class="pv" onclick="go(-1)" aria-label="Slide trước">‹</button><button class="nx" onclick="go(1)" aria-label="Slide sau">›</button><div class="dots">${[0,1,2,3,4].map(i=>`<i class="${i?'':'on'}"></i>`).join('')}</div></div><div class="qk">${qk}</div>
+<div id="g"><aside class="l"><section class="bx"><h3>Giới thiệu về trường</h3><div class="in"><div class="th" style="${gr(210)}"></div><p>${E(SCHOOL.name)} là cơ sở giáo dục công lập, luôn đặt mục tiêu nâng cao chất lượng dạy và học, xây dựng môi trường thân thiện, kỷ cương.</p><a href="#/gioi-thieu">Đọc thêm »</a></div></section>
+<section class="bx"><h3>Hình ảnh nhà trường</h3><div class="in gal">${[0,1,2,3].map(i=>`<button style="${gr(i*80)}" onclick="lb(${i*80})" aria-label="Xem ảnh ${i+1}"></button>`).join('')}</div></section>
+<section class="bx"><h3>Liên kết web</h3><div class="in">${[['Sở, ban, ngành',['UBND địa phương','Bộ Giáo dục','Sở Giáo dục']],['Trường học',['Trường THPT A','Trường THPT B']],['Phòng giáo dục',['Phòng Giáo dục']],['Website cần biết',['Báo Giáo dục','Tìm việc làm']]].map(g=>`<details><summary>${g[0]} (${g[1].length})</summary><ul>${g[1].map(x=>`<li><a href="#/cap-nhat">${x}</a></li>`).join('')}</ul></details>`).join('')}</div></section>
+<section class="bx"><h3>Thống kê</h3><div class="in">Thành viên: <b>3</b><br>Nội dung: <b>${617+NEWS.length}</b><br>Liên kết web: <b>15</b><br>Lượt xem: <b>${v.toLocaleString('vi-VN')}</b></div></section></aside>
+<div><section class="bx"><h2>Tin nổi bật</h2><div class="in"><div class="th" style="height:170px;${gr(NEWS[0].h)}"></div><b><a href="#/bai/0">${E(NEWS[0].t)}</a></b><ul>${LI(NEWS.slice(1,5))}</ul></div></section>
+<section class="bx"><h2>Thời khóa biểu học kỳ</h2><div class="in"><b>Thời khóa biểu Học kỳ 1 áp dụng từ ngày 14/9/2026</b><br><span class="dt">Cập nhật: 13/09/2026 · Viết bởi ${E(SCHOOL.person)}</span><ul><li><a href="#/tkb">Thời khóa biểu chính khóa</a></li><li><a href="#/tkb">Thời khóa biểu Thể dục, GDQP&AN</a></li></ul></div></section>${blk('Bản tin trường',0)}${blk('Tuyển sinh - Tốt nghiệp THPT',2)}</div>
+<aside class="r"><section class="bx"><h3>Thông tin - Thông báo</h3><div class="in"><ul>${LI(NEWS.slice(5,10))}</ul></div></section><section class="bx"><h3>Hồ sơ công khai</h3><div class="in"><ul>${Array.from({length:10},(_,i)=>`<li><a href="#/cap-nhat">${['Kế hoạch giáo dục năm học 2026-2027','Kế hoạch kiểm tra cuối học kỳ','Ma trận ôn tập giữa kỳ','Nghị quyết Hội nghị viên chức'][i%4]} (${i+1})</a></li>`).join('')}</ul></div></section><section class="bx"><h3>Tài nguyên mới</h3><div class="in"><ul>${Array.from({length:10},(_,i)=>`<li><a href="#/cap-nhat">Đáp án kiểm tra ${SUBJ[i]} (${(i+3)*137} lượt)</a></li>`).join('')}</ul></div></section><section class="bx"><h3>Liên hệ Ban biên tập</h3><div class="in"><b>${E(SCHOOL.person)}</b> - CNTT, Quản trị website<br>☎ ${SCHOOL.phone}<br>✉ ${SCHOOL.email}</div></section><section class="bx"><h3>Chịu trách nhiệm nội dung</h3><div class="in"><b>${E(SCHOOL.person)}</b> - Hiệu trưởng<br>☎ ${SCHOOL.phone}<br>✉ ${SCHOOL.email}</div></section></aside></div>`;
+ clearInterval(st);if(!matchMedia('(prefers-reduced-motion:reduce)').matches)st=setInterval(()=>{if(!paused)go(1)},5000)}
+function go(d){const s=document.querySelectorAll('.sl .s'),o=document.querySelectorAll('.dots i');if(!s.length)return;s[si].classList.remove('on');o[si].classList.remove('on');si=(si+d+5)%5;s[si].classList.add('on');o[si].classList.add('on')}
+function lb(h){$('#lbi').style.cssText=gr(h);$('#lbi').textContent='Ảnh hoạt động của '+SCHOOL.short;$('#lb').style.display='flex'}
+/* ===== TRANG CON ===== */
+let pg=1;
+function list(cat,q){const all=NEWS.filter(n=>(cat=='*'||n.c==cat)&&(!q||n.t.toLowerCase().includes(q.toLowerCase()))),pc=Math.max(1,Math.ceil(all.length/6));pg=Math.min(pg,pc);
+ $('#main').innerHTML=`<section class="bx" style="margin-top:14px"><h2>Tin tức: ${E(cat=='*'?'Tất cả':cat)}</h2><div class="in"><p>${CATS.map(c=>`<a class="btn" href="#/tin-tuc/${c}">${c}</a>`).join('')}<a class="btn" href="#/tin-tuc/*">Tất cả</a></p>${all.slice((pg-1)*6,pg*6).map(n=>`<div style="display:flex;gap:12px;margin:10px 0"><div class="th" style="width:130px;height:80px;flex:none;${gr(n.h)}"></div><div><b><a href="#/bai/${n.id}">${E(n.t)}</a></b><br><span class="dt">${fd(n.d)} · ${E(n.c)}</span></div></div>`).join('')||'<p>Không tìm thấy bài viết.</p>'}<div class="pg">${Array.from({length:pc},(_,i)=>`<button class="${i+1==pg?'on':''}" onclick="pg=${i+1};route()">${i+1}</button>`).join('')}</div></div></section>`}
+function art(id){const n=NEWS[id];if(!n)return nf();$('#main').innerHTML=`<article class="bx" style="margin-top:14px"><h2>${E(n.t)}</h2><div class="in"><p class="dt">${fd(n.d)} · ${E(n.c)} · Tác giả: ${E(n.by)}</p><div class="th" style="height:220px;${gr(n.h)}"></div><p>${E(SCHOOL.name)} tổ chức hoạt động "${E(n.t)}" với sự tham gia của giáo viên, học sinh và phụ huynh. Hoạt động diễn ra trang trọng, thiết thực, góp phần nâng cao chất lượng giáo dục toàn diện của nhà trường.</p><p>Nhà trường tiếp tục triển khai các nội dung liên quan theo kế hoạch năm học.</p><button class="btn" onclick="print()">🖨 In</button><button class="btn" onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);toast('Đã sao chép liên kết')">🔗 Chia sẻ</button><h3 style="margin-top:14px">Bài liên quan</h3><ul>${LI(NEWS.filter(x=>x.c==n.c&&x.id!=id).slice(0,4))}</ul></div></article>`}
+function nf(){$('#main').innerHTML='<section class="bx" style="margin-top:14px"><h2>Thông báo</h2><div class="in"><p>Nội dung đang cập nhật.</p><a href="#/">← Về trang chủ</a></div></section>'}
+function about(){$('#main').innerHTML=`<section class="bx" style="margin-top:14px"><h2>Giới thiệu về trường</h2><div class="in"><div class="th" style="height:200px;${gr(210)}"></div><p>${E(SCHOOL.name)} là trường trung học phổ thông công lập. Trải qua nhiều năm xây dựng và phát triển, nhà trường luôn duy trì nền nếp, kỷ cương, quan tâm chất lượng đại trà và mũi nhọn, chăm lo hoạt động Đoàn, câu lạc bộ và hướng nghiệp cho học sinh.</p><p>Liên hệ: ${SCHOOL.phone} · ${SCHOOL.email}</p></div></section>`}
+function contact(){$('#main').innerHTML=`<section class="bx" style="margin-top:14px"><h2>Liên hệ</h2><div class="in"><p><b>${E(SCHOOL.name)}</b><br>${E(SCHOOL.addr)}<br>☎ ${SCHOOL.phone}<br>✉ ${SCHOOL.email}</p><form id="cf" novalidate><p><input id="cn" placeholder="Họ và tên" aria-label="Họ và tên" style="width:100%"></p><p><input id="ce" type="email" placeholder="Email" aria-label="Email" style="width:100%"></p><p><textarea id="cm" rows="5" placeholder="Nội dung" aria-label="Nội dung"></textarea></p><p id="cer" style="color:var(--ac)" role="alert"></p><button class="btn p">Gửi liên hệ</button></form></div></section>`;
+ $('#cf').onsubmit=e=>{e.preventDefault();const n=$('#cn').value.trim(),m=$('#ce').value.trim(),c=$('#cm').value.trim();if(n.length<2)return $('#cer').textContent='Vui lòng nhập họ tên.';if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m))return $('#cer').textContent='Email chưa hợp lệ.';if(c.length<5)return $('#cer').textContent='Vui lòng nhập nội dung.';
+  const a=JSON.parse(localStorage.ct||'[]');a.push({n,m,c,t:Date.now()});localStorage.ct=JSON.stringify(a);e.target.reset();$('#cer').textContent='';toast('Đã gửi liên hệ. Cảm ơn bạn!')}}
+function tkb(cl='10A1'){const rows=Array.from({length:10},(_,p)=>`<tr><th>Tiết ${p+1}</th>${DAYS.map((_,d)=>`<td>${p==4||p==9?'<span class="dt">Nghỉ</span>':SUBJ[(p+d*3+CL.indexOf(cl))%10]+'<br><span class="dt">'+E(SCHOOL.person)+'</span>'}</td>`).join('')}</tr>`).join('');
+ $('#main').innerHTML=`<section class="bx" style="margin-top:14px"><h2>Thời khóa biểu</h2><div class="in"><label>Lớp: <select id="cs" onchange="tkb(this.value)">${CL.map(c=>`<option ${c==cl?'selected':''}>${c}</option>`).join('')}</select></label><div class="tw"><table><tr><th></th>${DAYS.map(d=>`<th>${d}</th>`).join('')}</tr>${rows}</table></div></div></section>`}
+function pics(){$('#main').innerHTML=`<section class="bx" style="margin-top:14px"><h2>Thư viện ảnh</h2><div class="in gal">${Array.from({length:12},(_,i)=>`<button style="${gr(i*30)}" onclick="lb(${i*30})" aria-label="Xem ảnh ${i+1}"></button>`).join('')}</div></section>`}
+function dir(){$('#main').innerHTML=`<section class="bx" style="margin-top:14px"><h2>Danh bạ điện thoại</h2><div class="in"><p><select id="fg" aria-label="Lọc theo tổ"><option value="">Tất cả các tổ</option>${['Ban giám hiệu',...TO].map(t=>`<option>${t}</option>`).join('')}</select> <input id="fp2" placeholder="Lọc theo chức vụ" aria-label="Lọc theo chức vụ"></p><div id="dl"></div></div></section>`;
+ const draw=()=>{const g=$('#fg').value,p=$('#fp2').value.toLowerCase(),gs=['Ban giám hiệu',...TO].filter(x=>!g||x==g);$('#dl').innerHTML=gs.map(x=>`<details data-g="${E(x)}"><summary>${E(x)}</summary><div class="tw"></div></details>`).join('');
+  document.querySelectorAll('#dl details').forEach(d=>d.addEventListener('toggle',()=>{if(!d.open||d.dataset.done)return;d.dataset.done=1;const gn=d.dataset.g,rs=(gn=='Ban giám hiệu'?DB.filter(r=>/trưởng/.test(r.pos)&&/Hiệu|Phó/.test(r.pos)):DB.filter(r=>r.to==gn&&!/Hiệu/.test(r.pos))).filter(r=>!p||r.pos.toLowerCase().includes(p));
+   d.lastElementChild.innerHTML='<table><tr><th>STT</th><th>Họ và tên</th><th>Chức vụ</th><th>SĐT</th><th>Email</th></tr>'+(rs.length?rs:[{pos:'Giáo viên'},{pos:'Tổ trưởng'}]).map((r,i)=>`<tr><td>${i+1}</td><td>${E(SCHOOL.person)}</td><td>${E(r.pos)}</td><td>${SCHOOL.phone}</td><td>${SCHOOL.email}</td></tr>`).join('')+'</table>'}))};
+ $('#fg').onchange=draw;$('#fp2').oninput=draw;draw()}
+function route(){const h=decodeURIComponent(location.hash||'#/').slice(2),[p,a]=h.split('/'),qs=h.split('?q=')[1];clearInterval(st);
+ if(!p)home();else if(p=='tin-tuc')list((a||'*').split('?')[0],qs);else if(p=='bai')art(+a);else if(p=='gioi-thieu')about();else if(p=='lien-he')contact();else if(p=='tkb')tkb();else if(p=='anh')pics();else if(p=='danh-ba')dir();else nf();
+ document.getElementById('mn').classList.remove('open')}
+addEventListener('hashchange',()=>{pg=1;route();scrollTo(0,0)});route();
+</script></body></html>
